@@ -1,0 +1,752 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: #b40018;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.logo span {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #333;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #c4001a;
+}
+
+.cart-button {
+    border: none;
+    background: #b40018;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+#cartCount {
+    background: white;
+    color: #b40018;
+    padding: 2px 7px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(80, 0, 10, 0.70),
+            rgba(120, 0, 20, 0.70)
+        ),
+        url("https://loremflickr.com/1600/900/food,restaurant?lock=999")
+        center/cover;
+}
+
+.hero-content {
+    color: white;
+    padding: 30px;
+}
+
+.hero-small {
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.hero-small) {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: 2px solid #b40018;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn.primary {
+    background: #b40018;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #8e0013;
+}
+
+.btn.secondary {
+    background: white;
+    color: #b40018;
+}
+
+.btn.secondary:hover {
+    background: #ffecef;
+}
+
+.full-btn {
+    width: 100%;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-label {
+    color: #b40018;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about-section h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 12px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    background: #fff8f9;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.about-box {
+    background: white;
+    min-height: 300px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 45px rgba(150,0,20,0.08);
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.about-box div {
+    font-size: 90px;
+    margin-bottom: 15px;
+}
+
+.about-box h3 {
+    color: #b40018;
+    font-size: 25px;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: white;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #b40018;
+    color: white;
+    border-color: #b40018;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box input:focus {
+    border-color: #b40018;
+}
+
+
+/* ================= MENU CARDS ================= */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(150,0,20,0.13);
+}
+
+.food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.food-info {
+    padding: 18px;
+}
+
+.food-category {
+    color: #b40018;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.food-info h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin: 8px 0;
+    min-height: 48px;
+}
+
+.food-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.food-price {
+    color: #b40018;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.view-btn {
+    border: none;
+    background: #fff0f2;
+    color: #b40018;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    color: #777;
+    padding: 30px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    width: min(850px, 100%);
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.modal-content > img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.modal-info {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-info h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.modal-category {
+    color: #b40018;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.modal-price {
+    font-size: 25px;
+    color: #b40018;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.close-modal,
+.close-cart {
+    border: none;
+    background: #b40018;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 2;
+}
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.quantity-box button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #ffecef;
+    color: #b40018;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.quantity-box span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* ================= CART ================= */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 3000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.cart-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cart {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: min(480px, 100%);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.3s;
+}
+
+.cart-overlay.show .cart {
+    transform: translateX(0);
+}
+
+.cart-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-cart {
+    background: #222;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #888;
+    padding: 50px 10px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 65px 1fr auto;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-item h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    color: #b40018;
+    font-weight: bold;
+}
+
+.cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 8px;
+}
+
+.cart-qty button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    background: #ffecef;
+    color: #b40018;
+    font-weight: bold;
+}
+
+.remove-item {
+    border: none;
+    background: transparent;
+    color: #999;
+    font-size: 18px;
+}
+
+.customer-form {
+    padding: 18px 20px;
+    border-top: 1px solid #eee;
+}
+
+.customer-form h3 {
+    margin-bottom: 12px;
+}
+
+.customer-form input,
+.customer-form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    outline: none;
+    resize: vertical;
+}
+
+.customer-form input:focus,
+.customer-form textarea:focus {
+    border-color: #b40018;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.total-row strong {
+    color: #b40018;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #25d366;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: #fff8f9;
+}
+
+.contact-box {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-box > div {
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-box span {
+    font-size: 45px;
+}
+
+.contact-box h3 {
+    margin: 12px 0 7px;
+    color: #b40018;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .nav {
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        grid-template-columns: 1fr;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-content > img {
+        min-height: 230px;
+        height: 230px;
+    }
+
+    .modal-info {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card img {
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+}
